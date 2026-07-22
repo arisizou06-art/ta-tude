@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Daun putih -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,26 Q75,54 54,82 Q33,54 54,26 Z" />
+    <!-- Tulang daun utama -->
+    <path
+        android:strokeColor="#5FA600"
+        android:strokeWidth="2.6"
+        android:strokeLineCap="round"
+        android:pathData="M54,32 L54,77" />
+    <!-- Urat samping -->
+    <path
+        android:strokeColor="#5FA600"
+        android:strokeWidth="1.9"
+        android:strokeLineCap="round"
+        android:pathData="M54,44 L67,38 M54,44 L41,38 M54,55 L68,49 M54,55 L40,49 M54,66 L65,60 M54,66 L43,60" />
+</vector>

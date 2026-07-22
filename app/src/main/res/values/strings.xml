@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Sistem Deteksi Penyakit Jeruk</string>
+    <string name="info_title">Informasi Penyakit</string>
+    <string name="info_subtitle">Daftar penyakit jeruk dari database lokal.</string>
+    <string name="info_search_hint">Cari penyakit</string>
+    <string name="info_empty_search">Data penyakit tidak ditemukan.</string>
+    <string name="info_detail_back">Kembali ke daftar</string>
+    <string name="info_asset_missing">Gambar lokal belum tersedia di assets.</string>
+    <string name="info_section_description">Deskripsi</string>
+    <string name="info_section_symptoms">Gejala</string>
+    <string name="info_section_causes">Penyebab</string>
+    <string name="info_section_treatment">Penanganan</string>
+    <string name="info_section_prevention">Pencegahan</string>
+    <string name="info_section_severity">Tingkat Keparahan</string>
+</resources>

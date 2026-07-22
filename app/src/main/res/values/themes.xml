@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.CitrusScan" parent="android:Theme.Material.NoActionBar">
+        <!-- Latar gelap konsisten: hindari kilatan putih saat app dibuka + status/nav bar gelap -->
+        <item name="android:windowBackground">@color/citrus_bg_dark</item>
+        <item name="android:statusBarColor">@color/citrus_bg_dark</item>
+        <item name="android:navigationBarColor">@color/citrus_bg_dark</item>
+    </style>
+</resources>
