@@ -14,3 +14,12 @@
 .cxx
 local.properties
 /docs/
+
+# Log kompilasi Kotlin (sampah lokal)
+.kotlin/
+
+# Konfigurasi Android Studio yang spesifik per komputer
+/.idea/deploymentTargetSelector.xml
+/.idea/deviceManager.xml
+/.idea/studiobot.xml
+/.idea/planningMode.xml

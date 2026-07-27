@@ -3,10 +3,11 @@ package com.tudecitrus.feature.detection.model
 import android.graphics.Bitmap
 import android.net.Uri
 
-// Model final 2026-06 (MobileNetV3, dataset SEIMBANG & bersih 141/kelas, input 300x300):
-// akurasi penuh 90,0% (macro-F1 90,8%). Dengan mekanisme penolakan keyakinan-rendah:
-// - Reject jika confidence < 75%  -> pada prediksi yang DITERIMA akurasi ~94% (cakupan ~92%)
-// - High confidence >= 85%        -> akurasi ~97%
+// Model final (MobileNetV3, dataset seimbang 141/kelas, input 300x300), diuji pada 110 citra uji:
+// akurasi 90,00% dengan prediksi tunggal (skema yang dipakai aplikasi ini) / 90,91% dengan TTA;
+// macro-F1 90,7%. Ambang di bawah berasal dari analisis akurasi selektif (Tabel 4.2 Bab IV):
+// - Reject jika confidence < 75%  -> akurasi 95,8% pada cakupan 86,4% kasus
+// - High confidence >= 85%        -> akurasi 97,5% pada cakupan 73,6% kasus
 private const val MIN_ACCEPTED_CONFIDENCE_THRESHOLD = 0.75f
 private const val HIGH_CONFIDENCE_THRESHOLD = 0.85f
 
