@@ -9,6 +9,7 @@ import com.tudecitrus.feature.detection.model.DetectionUiState
 import com.tudecitrus.feature.detection.model.ImageValidationResult
 import com.tudecitrus.feature.detection.model.SelectedImage
 import com.tudecitrus.feature.detection.service.AIModelService
+import com.tudecitrus.feature.detection.service.NotCitrusLeafException
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -76,10 +77,14 @@ class DetectionViewModel(
                         "Proses analisis AI melebihi batas waktu 10 detik. Silakan coba lagi atau gunakan gambar dengan kualitas berbeda."
                     else -> throwable.message ?: "Gagal menjalankan analisis AI."
                 }
+                // Objek bukan daun jeruk bukan kegagalan sistem, melainkan arahan bagi
+                // pengguna, sehingga ditampilkan seperti pesan keyakinan rendah.
+                val isNotCitrusLeaf = throwable is NotCitrusLeafException
                 _uiState.value = _uiState.value.copy(
                     isAnalyzing = false,
                     analysisStatus = null,
-                    errorMessage = message
+                    errorMessage = if (isNotCitrusLeaf) null else message,
+                    lowConfidenceMessage = if (isNotCitrusLeaf) message else null
                 )
                 return
             }
